@@ -1,11 +1,6 @@
 import {Platform,StyleSheet} from 'react-native';
 import styled from 'styled-components/native';
 
-const Label = styled.Text`
-    font-size : 20px;
-    font-weight : bold;
-    margin-bottom:12px;
-`;
 
 const Input = styled.TextInput`
     width: 63%;
@@ -22,8 +17,13 @@ function RegistInput(props){
     return (
         <Input 
         style={styles.shadow}
+        //
+        onChangeText={props.onChangeText}
+        value={props.value}
+        //
         placeholder={props.text}
-        ></Input>
+        >
+        </Input>
     )
 }
 export default RegistInput;

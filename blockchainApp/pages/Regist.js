@@ -36,13 +36,22 @@ import ConstraintText from '../components/RegistComponents/ConstraintText';
 
 
 function Regist({navigation}){
+    
     const [userid,setUserid] = React.useState('');
     const [userpw,setUserpw] = React.useState('');
+    const [username,setUsername] = React.useState('');
+    const [useremail,setUseremail] = React.useState('');
+    const [userphone,setUserphone] = React.useState('');
+    //
     const [userWalletDist,setUserWalletDist] = React.useState('');
-
+    
     const store = async ()=>{
         if(userid === '') return;
         if(userpw === '') return;
+        if(username === '') return;
+        if(useremail === '') return;
+        if(userphone === '') return;
+        //
         if(userWalletDist === '') return;
 
         let list = await AsyncStorage.getItem( userid );
@@ -55,8 +64,13 @@ function Regist({navigation}){
         list.push({
             userid,
             userpw,
+            username,
+            useremail,
+            userphone,
+            //
             userWalletDist
         });
+        
         await AsyncStorage.setItem(userid,JSON.stringify(list));
         navigation.goBack();
     }
@@ -75,7 +89,7 @@ function Regist({navigation}){
             <RegistContents>
                 {/* small container은 input,button 2개씩 들어가는곳만 */}
                 <SmallContainer>
-                    <RegistInput 
+                    <RegistInput
                     text='   ID :'
                     value = {userid}
                     onChangeText = {value => setUserid(value)}
@@ -96,9 +110,10 @@ function Regist({navigation}){
                 
                 <SmallContainer>
                     <RegistInput
-                    text='   PW확인 :'
+                    text='   지갑주소 :'
                     value = {userWalletDist}
                     onChangeText = {value => setUserWalletDist(value)}
+                    //onChangeText = {value => setUserpw(value)}
                     />
                 </SmallContainer>
 
@@ -106,8 +121,8 @@ function Regist({navigation}){
                 <SmallContainer>
                     <RegistInput 
                     text='   이름 :'
-                    value = {userid}
-                    onChangeText = {value => setUserid(value)}
+                    value = {username}
+                    onChangeText = {value => setUsername(value)}
                     />
                     {/* 남여 선택버튼을 터치만으로 변경 가능하게 해도 될지 여부 상의필요 */}
                     <RegistPageButton text='남  ▼'></RegistPageButton>
@@ -128,8 +143,10 @@ function Regist({navigation}){
                 <SmallContainer>
                     <RegistInput
                     text='   email :'
-                    value = {userWalletDist}
-                    onChangeText = {value => setUserWalletDist(value)}
+                    value = {useremail}
+                    //value = {userWalletDist}
+                    //onChangeText = {value => setUserWalletDist(value)}
+                    onChangeText = {value => setUseremail(value)}
                     />
                 </SmallContainer>
 
@@ -137,8 +154,8 @@ function Regist({navigation}){
                 <SmallContainer>
                     <RegistInput 
                     text='   phone :'
-                    value = {userid}
-                    onChangeText = {value => setUserid(value)}
+                    value = {userphone}
+                    onChangeText = {value => setUserphone(value)}
                     />
 
                     <RegistPageButton text='확인'></RegistPageButton>

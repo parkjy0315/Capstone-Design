@@ -17,10 +17,10 @@ const Label = styled.Text`
     color : #ffffff;
 `;
 
-
+{/*원래 23번라인 자리 <Container onPress = {props.onPress}>*/}
 function RegistDatePicker(props){
     return (
-        <Container onPress = {props.onPress}>
+        <Container>
             <Label>{props.text}</Label>
         </Container>
     )

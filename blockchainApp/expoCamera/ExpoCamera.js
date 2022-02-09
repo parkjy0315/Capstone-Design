@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { Camera } from 'expo-camera';
+import { YellowBox } from 'react-native-web';
+import styled from 'styled-components/native';
+
+const Container = styled.SafeAreaView`
+  margin:0 auto;
+`;
 
 function ExpoCamera() {
   const [hasPermission, setHasPermission] = useState(null);
@@ -14,13 +20,13 @@ function ExpoCamera() {
   }, []);
 
   if (hasPermission === null) {
-    return <View />
+    return <Container />
   }
   if (hasPermission === false) {
     return <Text>No access to camera</Text>
   }
   return (
-    <View style={styles.container}>
+    <Container style={styles.container}>
       <Camera style={styles.camera} type={type}>
         <View style={styles.buttonContainer}>
           <TouchableOpacity
@@ -36,15 +42,18 @@ function ExpoCamera() {
           </TouchableOpacity>
         </View>
       </Camera>
-    </View>
+    </Container>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    width:'90%',
+    height:'50%',
   },
   camera: {
+    
+    borderRadius:50,
     flex: 1,
   },
   buttonContainer: {

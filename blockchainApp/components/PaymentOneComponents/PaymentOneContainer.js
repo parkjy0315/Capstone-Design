@@ -1,7 +1,8 @@
 import styled from 'styled-components/native';
 
-const Container = styled.SafeAreaView`
+const PaymentOneContainer = styled.SafeAreaView`
     flex : 1;
+    background-color:white;
 `;
 
-export default Container;
+export default PaymentOneContainer;
