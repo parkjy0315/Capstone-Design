@@ -13,7 +13,7 @@ const Label = styled.Text`
     font-weight:bold;
 `;
 
-function PaymentOneBottomMyInfo(){
+function RemittanceOneBottomMyInfo(){
     return(
         <Container>
             <Label>홍길동 (72339.21 HSC)</Label>
@@ -21,4 +21,4 @@ function PaymentOneBottomMyInfo(){
     )
 }
 
-export default PaymentOneBottomMyInfo;
+export default RemittanceOneBottomMyInfo;

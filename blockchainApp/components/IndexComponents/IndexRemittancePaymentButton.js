@@ -19,7 +19,7 @@ function IndexRemittancePaymentButton(){
     const navigation = useNavigation(); 
     return(
         <Container>
-            <IndexPageRemittanceButton text='송금'/>
+            <IndexPageRemittanceButton onPress={()=>{navigation.navigate('RemittanceOne')}} text='송금'/>
             
             <IndexPagePaymentButton onPress={()=>{navigation.navigate('PaymentOne')}} text='결제'/>
         </Container>
