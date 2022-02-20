@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/user/Documents/React-Native/LearnReactNative/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pt-rPT/values-pt-rPT.xml",
+            "outputFile": "/Users/user/Documents/React-Native/Capstone-Design/React-Native-Study/React-Study-JYPark/ch02/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-pt-rPT/values-pt-rPT.xml",
             "map": [
                 {
                     "source": "/Users/user/.gradle/caches/transforms-3/540dbfb90b248d7b59cd154497c15f99/transformed/core-1.5.0/res/values-pt-rPT/values-pt-rPT.xml",
