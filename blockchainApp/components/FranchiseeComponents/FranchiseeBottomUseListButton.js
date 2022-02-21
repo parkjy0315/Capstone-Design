@@ -20,12 +20,12 @@ const styles = StyleSheet.create({
 });
 
 
-function IndexBottomOfficialButton(props){
+function FranchiseeBottomUseListButton(props){
     return(
         <Container>
-            <Text onPress={props.onPress} style={styles.text}>공지</Text>
+            <Text onPress={props.onPress} style={styles.text}>이용내역</Text>
         </Container>
     );
 };
 
-export default IndexBottomOfficialButton;
+export default FranchiseeBottomUseListButton;

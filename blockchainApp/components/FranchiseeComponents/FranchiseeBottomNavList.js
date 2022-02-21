@@ -1,0 +1,36 @@
+import React from 'react';
+import styled from 'styled-components/native';
+import {StyleSheet,Text} from 'react-native';
+//첫 버튼 (홈)
+import FranchiseeBottomHomeButton from './FranchiseeBottomHomeButton';
+import FranchiseeBottomOfficialButton from './FranchiseeBottomOfficialButton';
+import FranchiseeBottomMarketButton from './FranchiseeBottomMarketButton';
+import FranchiseeBottomUseListButton from './FranchiseeBottomUseListButton';
+
+import {useNavigation} from '@react-navigation/native';
+
+const Container = styled.SafeAreaView`
+    width:95%;
+    height:5%;
+    background-color:white;
+    margin: 0 auto;
+    border:1px solid gray;
+    border-radius:7px;
+    flex-direction:row;
+`;
+
+
+
+function FranchiseeBottomNavList(){
+    const navigation = useNavigation();
+    return(
+        <Container>
+            <FranchiseeBottomHomeButton onPress={()=>navigation.navigate('Index')}/>
+            <FranchiseeBottomOfficialButton onPress={()=>navigation.navigate('Notice')}/>
+            <FranchiseeBottomMarketButton onPress={()=>navigation.navigate('Franchisee')}/>
+            <FranchiseeBottomUseListButton onPress={()=>navigation.navigate('UsageHistory')}/>
+        </Container>
+    );
+}
+
+export default FranchiseeBottomNavList;

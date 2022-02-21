@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/native';
 import {StyleSheet,Text} from 'react-native';
-import { WhiteBalance } from 'expo-camera/build/Camera.types';
+
 
 const Container = styled.TouchableOpacity`
     border-radius : 7px;
@@ -20,12 +20,12 @@ const styles = StyleSheet.create({
 });
 
 
-function IndexBottomOfficialButton(props){
+function NoticeBottomHomeButton(props){
     return(
         <Container>
-            <Text onPress={props.onPress} style={styles.text}>공지</Text>
+            <Text onPress={props.onPress} style={styles.text}>홈</Text>
         </Container>
     );
 };
 
-export default IndexBottomOfficialButton;
+export default NoticeBottomHomeButton;

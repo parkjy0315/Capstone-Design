@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
 });
 
 
-function IndexBottomOfficialButton(props){
+function UsageHistoryBottomOfficialButton(props){
     return(
         <Container>
             <Text onPress={props.onPress} style={styles.text}>공지</Text>
@@ -28,4 +28,4 @@ function IndexBottomOfficialButton(props){
     );
 };
 
-export default IndexBottomOfficialButton;
+export default UsageHistoryBottomOfficialButton;

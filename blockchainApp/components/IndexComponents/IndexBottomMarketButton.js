@@ -20,10 +20,10 @@ const styles = StyleSheet.create({
 });
 
 
-function IndexBottomMarketButton(){
+function IndexBottomMarketButton(props){
     return(
         <Container>
-            <Text style={styles.text}>가맹점</Text>
+            <Text onPress={props.onPress} style={styles.text}>가맹점</Text>
         </Container>
     );
 };

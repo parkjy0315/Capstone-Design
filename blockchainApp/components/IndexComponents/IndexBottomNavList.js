@@ -6,6 +6,9 @@ import IndexBottomHomeButton from './IndexBottomHomeButton';
 import IndexBottomOfficialButton from './IndexBottomOfficialButton';
 import IndexBottomMarketButton from './IndexBottomMarketButton';
 import IndexBottomUseListButton from './IndexBottomUseListButton';
+
+import {useNavigation} from '@react-navigation/native';
+
 const Container = styled.SafeAreaView`
     width:95%;
     height:5%;
@@ -19,12 +22,14 @@ const Container = styled.SafeAreaView`
 
 
 function IndexBottomNavList(){
+    const navigation = useNavigation();
     return(
         <Container>
-            <IndexBottomHomeButton/>
-            <IndexBottomOfficialButton/>
-            <IndexBottomMarketButton/>
-            <IndexBottomUseListButton/>
+            
+            <IndexBottomHomeButton onPress={()=>navigation.navigate('Index')}/>
+            <IndexBottomOfficialButton onPress={()=>navigation.navigate('Notice')}/>
+            <IndexBottomMarketButton onPress={()=>navigation.navigate('Franchisee')}/>
+            <IndexBottomUseListButton onPress={()=>navigation.navigate('UsageHistory')}/>
         </Container>
     );
 }

@@ -15,8 +15,9 @@ import RemittanceOneThree from './pages/RemittanceOneThree'
 import UserInfo from './pages/UserInfo';
 import Regist from './pages/Regist';
 import Login from './pages/Login';
-
-
+import Notice from './pages/Notice';
+import Franchisee from './pages/Franchisee';
+import UsageHistory from './pages/UsageHistory';
 
 import ExpoCamera from './expoCamera/ExpoCamera';
 import { Camera } from 'expo-camera';
@@ -35,6 +36,11 @@ function App(){
         <Stack.Screen name="RemittanceOneTwo" component={RemittanceOneTwo} options={{title:'송금 화면 2'}}/>
         <Stack.Screen name="RemittanceOneThree" component={RemittanceOneThree} options={{title:'송금 화면 3'}}/>
         <Stack.Screen name="Index" component={Index} options={{title:'메인 화면'}}/>
+
+        <Stack.Screen name="Notice" component={Notice} options={{title:'공지 화면'}}/>
+        <Stack.Screen name="Franchisee" component={Franchisee} options={{title:'가맹점'}}/>
+        <Stack.Screen name="UsageHistory" component={UsageHistory} options={{title:'이용내역'}}/>
+
         <Stack.Screen name="UserInfo" component={UserInfo} options={{title:'유저 정보 화면'}}/>
         <Stack.Screen name="ExpoCamera" component={ExpoCamera} options={{title:'QR코드 스캔'}}/>
       </Stack.Navigator>

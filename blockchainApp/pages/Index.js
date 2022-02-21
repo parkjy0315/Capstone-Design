@@ -30,8 +30,8 @@ const SmallContainer = styled.SafeAreaView`
 `;
 
 function Index({navigation,route}){
-    const userid = route.params.userid;
-    const userWalletDist = route.params.userWalletDist;
+    //const userid = route.params.userid;
+    //const userWalletDist = route.params.userWalletDist;
 
     return(
         <Container>
