@@ -1,19 +1,36 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { SafeAreaView, StyleSheet, KeyboardAvoidingView, Platform } from 'react-native';
 import DateHead from './components/DateHead';
 import {SafeAreaProvider } from 'react-native-safe-area-context';
 import AddTodo from './components/AddTodo';
 import Empty from './components/Empty';
 import TodoList from './components/TodoList';
+import todosStorage from './storages/todosStorage';
 
 
 function App() {
   const today = new Date();
+
   const [todos, setTodos] = useState([
     {id: 1, text: '작업환경 설정', done: true},
     {id: 2, text: '리액트 네이티브 기초 공부', done: false},
     {id: 3, text: '투두리스트 만들어보기', done: false},
   ]);
+
+  //load
+  useEffect(() => {
+    todosStorage
+    .get()
+    .then(setTodos)
+    .catch(console.error);
+  }, []);
+
+  //save
+  useEffect(() => {
+    todosStorage.set(todos).catch(console.error);
+  }, [todos]);
+
+
   const onInsert = text => {
     // 새로 등록할 항목 아이디 구하기
     // 등록된 항목 중 가장 큰 아이디 구해, 그 값에 1을 더함
