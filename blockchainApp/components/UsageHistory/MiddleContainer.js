@@ -4,7 +4,7 @@ import {Text,StyleSheet} from 'react-native';
 
 const Container = styled.SafeAreaView`
     width:95%;
-    height:63%;
+    height:60%;
     background-color:white;
     margin:0 auto;
     margin-bottom:5%;

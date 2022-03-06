@@ -24,7 +24,7 @@ const Container = styled.SafeAreaView`
 function FranchiseeBottomNavList(){
     const navigation = useNavigation();
     return(
-        <Container>
+        <Container style={styles.shadow}>
             <FranchiseeBottomHomeButton onPress={()=>navigation.navigate('Index')}/>
             <FranchiseeBottomOfficialButton onPress={()=>navigation.navigate('Notice')}/>
             <FranchiseeBottomMarketButton onPress={()=>navigation.navigate('Franchisee')}/>
@@ -32,5 +32,22 @@ function FranchiseeBottomNavList(){
         </Container>
     );
 }
+
+const styles = StyleSheet.create({
+    shadow : {
+        ...Platform.select({
+            ios : {
+                shadowColor : '#95B3D7',
+                shadowOffset: {width:0,height:10},
+                shadowOpacity: 0.5,
+                shadowRadius:2.8,
+            },
+            android : {
+                elevation : 20,
+            },
+        })
+    }
+});
+
 
 export default FranchiseeBottomNavList;

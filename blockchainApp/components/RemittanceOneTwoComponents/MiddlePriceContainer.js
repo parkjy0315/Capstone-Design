@@ -1,6 +1,10 @@
 import React from 'react';
 import styled from 'styled-components/native';
 import PriceButton from './PriceButton';
+import {Platform} from 'react-native';
+const btnMarginBottom = Platform.OS === 'ios'
+? 8 : 5;
+
 const Container = styled.SafeAreaView`
     width:85%;
     height:30%;
@@ -13,7 +17,7 @@ const SmallContainer = styled.SafeAreaView`
     width: 100%;
     height: 15%;
     background-color:white;
-    margin-bottom:3%;
+    margin-bottom:${btnMarginBottom}%;
     flex-direction:row;
 `;
 

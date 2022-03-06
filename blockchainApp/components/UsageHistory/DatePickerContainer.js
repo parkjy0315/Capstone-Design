@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import { Platform,SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import DatePicker from 'react-native-datepicker';
 import styled from 'styled-components/native';
-
 
 const Container = styled.SafeAreaView`
   width:100%;
@@ -13,6 +12,11 @@ const Container = styled.SafeAreaView`
 `;
 
 function DatePickerContainer() {
+
+var dateText = Platform.OS === 'ios' ?
+"                          YYYY년 MM월                      ▼":
+"                                  YYYY년 MM월                              ▼";
+
   const [date, setDate] = useState('202203');
   return (
     <Container>
@@ -26,9 +30,9 @@ function DatePickerContainer() {
             mode="date" //The enum of date, datetime and time
             placeholder="select date"
             //format="DD-MM-YYYY"
-            format="                                  YYYY년 MM월                                ▼"
+            format={dateText}
             minDate="01-01-2016"
-            maxDate="01-01-2019"
+            maxDate="01-01-2023"
             confirmBtnText="Confirm"
             cancelBtnText="Cancel"
             customStyles={{

@@ -7,7 +7,7 @@ const SmallContainer = styled.SafeAreaView`
     width:100%;
     flex-direction:row;
 
-    margin-bottom:8px;
+    margin-bottom:1%;
 `;
 
 export default SmallContainer;

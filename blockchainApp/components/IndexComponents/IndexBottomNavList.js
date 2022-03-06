@@ -24,7 +24,7 @@ const Container = styled.SafeAreaView`
 function IndexBottomNavList(){
     const navigation = useNavigation();
     return(
-        <Container>
+        <Container style = {styles.shadow}>
             
             <IndexBottomHomeButton onPress={()=>navigation.navigate('Index')}/>
             <IndexBottomOfficialButton onPress={()=>navigation.navigate('Notice')}/>
@@ -33,5 +33,23 @@ function IndexBottomNavList(){
         </Container>
     );
 }
+
+
+const styles = StyleSheet.create({
+    shadow : {
+        ...Platform.select({
+            ios : {
+                shadowColor : '#95B3D7',
+                shadowOffset: {width:0,height:10},
+                shadowOpacity: 0.5,
+                shadowRadius:2.8,
+            },
+            android : {
+                elevation : 20,
+            },
+        })
+    }
+});
+
 
 export default IndexBottomNavList;

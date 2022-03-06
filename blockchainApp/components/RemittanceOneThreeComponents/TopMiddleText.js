@@ -13,7 +13,8 @@ const Label = styled.Text`
 function TopMiddleText(){
     return(
         <SmallContainer>
-            <Label>비밀번호를 입력해주세요</Label>
+            <Label>비밀번호를</Label>
+            <Label>입력해주세요</Label>
         </SmallContainer>
     );
 }

@@ -1,8 +1,11 @@
 import React from 'react';
 import styled from 'styled-components/native';
+import {Platform,Dimensions,StyleSheet,Text} from 'react-native';
+
+const bottomFontSize = Platform.OS === 'ios' ? 25 : 30;
 
 const Label = styled.Text`
-    font-size:30px;
+    font-size:${bottomFontSize}px;
     font-weight:bold;
 `;
 
@@ -10,7 +13,7 @@ const Container = styled.SafeAreaView`
     background-color:white;
     width:80%;
     margin:0 auto;
-    margin-top:25%;
+    
     flex-direction:row;
 `;
 

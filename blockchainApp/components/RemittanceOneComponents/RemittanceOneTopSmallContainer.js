@@ -16,13 +16,13 @@ const styles = StyleSheet.create({
 
 const Container = styled.SafeAreaView`
     background-color:white;
-    width:85%;
+    width:82%;
     height:6%;
     flex-direction:row;
     justify-content:space-between;
     margin:0 auto;
     margin-top:7%;
-    margin-bottom:10%;
+    margin-bottom:6%;
 `;
 
 function RemittanceOneTopSmallContainer(){

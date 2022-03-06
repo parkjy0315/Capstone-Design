@@ -6,8 +6,8 @@ const LongContainer = styled.SafeAreaView`
     height:7%;
     flex-direction:row;
     margin:0 auto;
-    margin-bottom:3%;
-    
+    margin-bottom:2%;
+    margin-top:2%;
 `;
 
 

@@ -50,11 +50,13 @@ const styles = StyleSheet.create({
   container: {
     width:'90%',
     height:'50%',
+    borderRadius:50,
+    overflow:'hidden',
   },
   camera: {
-    
     borderRadius:50,
     flex: 1,
+    overflow:'hidden',
   },
   buttonContainer: {
     flex: 1,

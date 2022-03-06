@@ -1,17 +1,21 @@
 import React from 'react';
 import styled from 'styled-components/native';
-import {StyleSheet,Image,Text} from 'react-native';
+import {Platform,Dimensions,StyleSheet,Image,Text} from 'react-native';
+
+const middleFontSize = Platform.OS === 'ios' ? 18 : 20;
+
+
 
 const Container = styled.SafeAreaView`
     margin:0 auto;
     margin-top:5%;
-    margin-bottom:18%;
+    margin-bottom:8%;
     background-color:white;
 `;
 
 const styles = StyleSheet.create({
     text :{
-        fontSize:22,
+        fontSize:middleFontSize,
         fontWeight:'bold',
         color:'#95B3D7'
     }

@@ -11,7 +11,7 @@ import { useNavigation } from '@react-navigation/native';
 const Container = styled.SafeAreaView`
     flex-direction:column;
     width:23%;
-    height:30%;
+    height:28%;
     background-color:white;
     margin:0 auto;
 `;

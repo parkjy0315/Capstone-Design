@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
 const Container = styled.SafeAreaView`
     background-color:white;
     width:85%;
-    height:6%;
+    height:6.5%;
     flex-direction:row;
     justify-content:space-between;
     margin:0 auto;

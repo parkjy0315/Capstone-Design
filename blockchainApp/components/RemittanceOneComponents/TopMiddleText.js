@@ -13,7 +13,8 @@ const Label = styled.Text`
 function TopMiddleText(){
     return(
         <SmallContainer>
-            <Label>송금주소를 선택해주세요</Label>
+            <Label>송금주소를</Label>
+            <Label>선택해주세요</Label>
         </SmallContainer>
     );
 }

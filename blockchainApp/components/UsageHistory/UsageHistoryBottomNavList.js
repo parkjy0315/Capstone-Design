@@ -24,7 +24,7 @@ const Container = styled.SafeAreaView`
 function UsageHistoryBottomNavList(){
     const navigation = useNavigation();
     return(
-        <Container>
+        <Container style={styles.shadow}>
             <UsageHistoryBottomHomeButton onPress={()=>navigation.navigate('Index')}/>
             <UsageHistoryBottomOfficialButton onPress={()=>navigation.navigate('Notice')}/>
             <UsageHistoryBottomMarketButton onPress={()=>navigation.navigate('Franchisee')}/>
@@ -32,5 +32,21 @@ function UsageHistoryBottomNavList(){
         </Container>
     );
 }
+const styles = StyleSheet.create({
+    shadow : {
+        ...Platform.select({
+            ios : {
+                shadowColor : '#95B3D7',
+                shadowOffset: {width:0,height:10},
+                shadowOpacity: 0.5,
+                shadowRadius:2.8,
+            },
+            android : {
+                elevation : 20,
+            },
+        })
+    }
+});
+
 
 export default UsageHistoryBottomNavList;

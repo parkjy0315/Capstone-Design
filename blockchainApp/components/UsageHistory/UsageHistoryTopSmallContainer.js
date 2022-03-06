@@ -22,7 +22,7 @@ const Container = styled.SafeAreaView`
     flex-direction:row;
     justify-content:space-between;
     margin:0 auto;
-    margin-top:7%;
+    margin-top:5%;
 `;
 
 function UsageHistoryTopSmallContainer(){

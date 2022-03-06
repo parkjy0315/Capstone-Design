@@ -4,8 +4,8 @@ import styled from 'styled-components/native';
 
 const SmallContainer = styled.SafeAreaView`
     background-color:white;
-    width:40%;
-    margin-bottom:14%;
+    width:70%;
+    margin-bottom:10%;
     margin-left:8%;
 `;
 

@@ -7,7 +7,7 @@ import NoticeViewTwo from './NoticeViewTwo';
 
 const Container = styled.SafeAreaView`
     width:90%;
-    height:70%;
+    height:66%;
     
     margin:0 auto;
     border-radius:7px;

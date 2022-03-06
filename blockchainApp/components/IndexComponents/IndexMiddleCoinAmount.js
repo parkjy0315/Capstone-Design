@@ -1,8 +1,18 @@
 import React from 'react';
 import styled from 'styled-components/native';
-import {StyleSheet,Text} from 'react-native';
 
 
+
+import { Dimensions } from 'react-native';
+import {Platform,StyleSheet,Text} from 'react-native';
+
+
+const width = Platform.OS === 'ios' ? 42 : 40;
+const height = Platform.OS === 'ios' ? 11 : 10;
+
+
+//const width = Platform.OS === 'ios' ? 100
+ //: 90; 
 
 const styles = StyleSheet.create({
     text:{
@@ -12,9 +22,9 @@ const styles = StyleSheet.create({
 });
 
 const Container = styled.SafeAreaView`
-    width:40%;
+    width:${width}%;
     background-color:white;
-    height:10%;
+    height:${height}%;
     margin:0 auto;
     position:absolute;
     left:30%;

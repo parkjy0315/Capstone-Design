@@ -1,11 +1,25 @@
 import React from 'react';
 import styled from 'styled-components/native';
 
+import {Platform} from 'react-native';
+const width = Platform.OS === 'ios'
+? 25 : 24;
+
+const height = Platform.OS === 'ios'
+? 31 : 35;
+
+const btnMarginLeft = Platform.OS === 'ios'
+? 4 : 5;
+
+const btnFontSize = Platform.OS === 'ios'
+? 14 : 16;
+
+
 const Container = styled.TouchableOpacity`
     border-radius : 30px;
-    margin-left:7%
-    width : 24%;
-    height : 35px;
+    margin-left:${btnMarginLeft}%
+    width : ${width}%;
+    height : ${height}px;
     background : #95B3D7;
     justify-content:center;
     align-items : center;
@@ -13,7 +27,7 @@ const Container = styled.TouchableOpacity`
 `;
 
 const Label = styled.Text`
-    font-size : 18px;
+    font-size : ${btnFontSize}px;
     color : #ffffff;
 `;
 
