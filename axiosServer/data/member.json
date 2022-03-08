@@ -1,0 +1,36 @@
+{
+	"banana": {
+		"name": "반하나",
+		"password": "1234",
+		"gender": "여자",
+		"userWalletDist": "fafvafwfawgaewfawfa"
+	},
+	"melon": {
+		"name": "메에론",
+		"password": "3333",
+		"gender": "여자",
+		"userWalletDist": "fafvafwfawgaewfawfa"
+	},
+	"orange": {
+		"name": "오렌지",
+		"password": "1111",
+		"gender": "여자",
+		"userWalletDist": "fafvafwfawgaewfawfa"
+	},
+	"apple": {
+		"name": "kjimapple",
+		"password": "4321"
+	},
+	"Gafawf": {
+		"password": "Fawffaw",
+		"name": "Vawcvdwac",
+		"useremail": "Fafvaw",
+		"userphone": "01012341234"
+	},
+	"Testac": {
+		"password": "4321",
+		"name": "테스트",
+		"useremail": "test@naver.com",
+		"userphone": "01012341234"
+	}
+}
