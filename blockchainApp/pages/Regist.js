@@ -127,7 +127,7 @@ function Regist({navigation}){
                 </SmallContainer>
                 
                 
-                <SmallContainer>
+                {/*<SmallContainer>
                     <RegistInput
                     text='   지갑주소 :'
                     value = {userWalletDist}
@@ -135,7 +135,7 @@ function Regist({navigation}){
                     //onChangeText = {value => setUserpw(value)}
                     />
                 </SmallContainer>
-
+                */}
                 {/*여기 부터 Button을 Radio로 변경필요 */}
                 <SmallContainer>
                     <RegistInput 
@@ -182,12 +182,11 @@ function Regist({navigation}){
 
 
                 <RegistConstraintArea>
-                    <ConstraintText>회원가입 시 개인정보제공 동의로 간주함.</ConstraintText>
+                    <ConstraintText/>
                 </RegistConstraintArea>
 
 
 
-            </RegistContents>
             
 
             <SmallContainerForBottomButton>
@@ -196,6 +195,7 @@ function Regist({navigation}){
             </SmallContainerForBottomButton>
 
             
+            </RegistContents>
 
 
         </RegistContainer>

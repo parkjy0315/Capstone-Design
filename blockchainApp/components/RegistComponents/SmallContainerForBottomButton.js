@@ -8,6 +8,7 @@ const SmallContainerForBottomButton = styled.SafeAreaView`
     flex-direction:row;
     justify-content:flex-end;
     margin-right:20px;
+    margin-top:5%;
 `;
 
 export default SmallContainerForBottomButton;
