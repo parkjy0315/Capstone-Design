@@ -18,7 +18,7 @@ import IndexBottomNavList from '../components/IndexComponents/IndexBottomNavList
 
 const Container = styled.SafeAreaView`
     flex : 1;
-    background-color:white;
+    background-color:white;;
 `;
 
 const SmallContainer = styled.SafeAreaView`
@@ -26,7 +26,7 @@ const SmallContainer = styled.SafeAreaView`
     width:87%;
     height:53%;
     margin:0 auto;
-    background-color:white;
+    background-color:white;;
 `;
 
 function Index({navigation,route}){
