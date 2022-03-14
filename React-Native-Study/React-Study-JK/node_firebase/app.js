@@ -40,7 +40,7 @@ app.use(function(err, req, res, next) {
 
 module.exports = app;
 
-
+var firebase = require("firebase");
 var admin = require("firebase-admin");
 var firestore = require("firebase-admin/firestore");
 
@@ -52,14 +52,51 @@ admin.initializeApp({
 
 const db = firestore.getFirestore();
 
-test();
+//signUpWithEmailPasswd("test2@a.com","123456");
+//signInWithEmailPasswd("test@a.com", "123456");
+//logout();
+db_test();
 
-async function test() {
-  db.collection("node_firebase_test2").doc("0313").set({
+async function db_test() {
+  db.collection("node_firebase_test1").doc("0313").set({
     name: "node.js second",
     date: "0313",
     person: "jk"
   });
+}
+
+async function signInWithEmailPasswd(userid, userpw) {
+  firebase.auth().signInWithEmailPassword(userid, userpw)
+      .then((userCredential) => {
+          console.log("successfully fetched user data: ");
+          var user = userCredential.user;
+      })
+      .catch((error) => {
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          console.log("error loggin : ", errorMessage);
+      })
+}
+
+async function signUpWithEmailPasswd(userid, userpw){
+  firebase.auth().createUserWithEmailAndPassword(userid, userpw)
+      .then((userCredential) => {
+          var user = userCredential.user;
+      })
+      .catch((error) => {
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          console.log("error signup : ", errorMessage);
+      })
+}
+
+async function logout(){
+  firebase.auth().signOut().then((userCredential) => {
+    console.log("logout success");
+  }).catch((error) => {
+    var errorMessage = error.message;
+    console.log("error loggout : ", errorMessage);
+  })
 }
 
 app.listen(3500,()=>{
