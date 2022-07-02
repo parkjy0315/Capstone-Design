@@ -1,0 +1,51 @@
+{
+  "name": "blockchainapp",
+  "version": "1.0.0",
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "eject": "expo eject"
+  },
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.15.17",
+    "@react-native-community/masked-view": "^0.1.11",
+    "@react-navigation/native": "^6.0.7",
+    "@react-navigation/native-stack": "^6.3.0",
+    "axios": "^0.26.0",
+    "expo": "~44.0.0",
+    "expo-av": "~10.2.0",
+    "expo-barcode-scanner": "~11.2.0",
+    "expo-camera": "~12.1.0",
+    "expo-dev-client": "~0.8.5",
+    "expo-location": "~14.0.1",
+    "expo-status-bar": "~1.2.0",
+    "lodash": "^4.17.21",
+    "qs": "^6.10.3",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-native": "0.64.3",
+    "react-native-datepicker": "^1.7.2",
+    "react-native-dialog-input": "^1.0.8",
+    "react-native-easy-toast": "^2.0.0",
+    "react-native-geolocation-service": "^5.3.0-beta.4",
+    "react-native-gesture-handler": "~2.1.0",
+    "react-native-keyboard-aware-scroll-view": "^0.9.5",
+    "react-native-maps": "0.29.4",
+    "react-native-qrcode-svg": "^6.1.2",
+    "react-native-reanimated": "~2.3.1",
+    "react-native-safe-area-context": "^3.3.2",
+    "react-native-screens": "~3.10.1",
+    "react-native-svg": "^12.3.0",
+    "react-native-video": "^5.2.0",
+    "react-native-vision-camera": "^2.12.0",
+    "react-native-web": "0.17.1",
+    "styled-components": "^5.3.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9"
+  },
+  "private": true
+}
